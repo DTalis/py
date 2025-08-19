@@ -73,10 +73,13 @@ else:
  #Exercises XP
 #1. Declare a variable called first and assign it to the value "Hello World".
 first = "Hello World"
+
 #2. Write a comment that says "This is a comment."
 #This is a comment.
+
 #3. Log a message to the terminal that says "I AM A COMPUTER!"
 print("I AM A COMPUTER!")
+
 #4. Write an if statement that checks if 1 is less than 2 and if 4 is greater than 2. If it is, show the message "Math is fun."
 if 1 < 2 and 4 > 2:
     print("Math is fun")
@@ -87,23 +90,53 @@ nope = None
 #7. Calculate the length of the string "What's my length?"
 string1 = len("What's my length?")
 print(f"The length of the string is: {string1}")
+
 #8. Convert the string "i am shouting" to uppercase.
 string2 = "i am shouting".upper()
 print(f"Uppercase_string{string2}")
+
 #9. Convert the string "1000"to the number 1000.
 number_from_string = int("1000")
 print(f"The type of '1000' is {type('1000')}, and the type of the converted number is {type(number_from_string)}")
+
 #10. Combine the number 4 with the string "real" to produce "4real".
 combined_string = str(4) + "real"
 print(f"The combined string is: {combined_string}")
+
 #11. Record the output of the expression 3 * "cool".
 three_times_cool = 3 * "cool"
 print(three_times_cool)
-#12. Record the output of the expression 1 / 0.
 
-#Determine the type of [].
-#Ask the user for their name, and store it in a variable called name.
-#Ask the user for a number. If the number is negative, show a message that says "That number is less than 0!" If the number is positive, show a message that says "That number is greater than 0!" Otherwise, show a message that says "You picked 0!.
-#Find the index of "l" in "apple".
-#Check whether "y" is in "xylophone".
+#12. Record the output of the expression 1 / 0.
+try: 
+    result = 1/0
+except ZeroDivisionError:
+     print("Error")
+
+#13. Determine the type of [].
+list_type = type([])
+print(f"The type of [] is: {list_type}")
+
+#14. Ask the user for their name, and store it in a variable called name.
+name1 = input("What is your name?")
+print(f"Hello, {name1}!")
+
+#15. Ask the user for a number. If the number is negative, show a message that says "That number is less than 0!" If the number is positive, show a message that says "That number is greater than 0!" Otherwise, show a message that says "You picked 0!.
+user_input = input("What is your number")
+user_number = float(user_input)
+if user_number < 0:
+    print("That number is less than 0!")
+elif user_number > 0:
+    print("That number is greater than 0!")
+else:
+    print ("You picked 0!")
+
+#16. Find the index of "l" in "apple".\
+print("apple".index("l"))
+
+#17. Check whether "y" is in "xylophone".
+print("Is 'y' in 'xylophone'?", "y" in "xylophone")
+
 #Check whether a string called my_string is all in lowercase.
+my_string = input("write a srting")
+print("Is the string all in lowercase?", my_string.islower())
