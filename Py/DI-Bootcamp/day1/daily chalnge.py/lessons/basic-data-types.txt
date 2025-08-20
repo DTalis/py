@@ -1,0 +1,5 @@
+1. Strings = text representation on python which can be recognaise by quatation marks. They are immutable
+2. Numbers. There are 3 types of numbers:
+Integers = are whole numbers
+Floats = decimal numbers
+comples numbers = real part + imaginary part
