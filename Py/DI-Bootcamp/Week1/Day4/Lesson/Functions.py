@@ -161,7 +161,7 @@ def upper_string(s):
 fruit = ["Apple", "Banana", "Pear", "Apricot", "Orange"]
 map_object = map(upper_string, fruit)
 print(list(map_object))
-'''
+
 
 def starts_with_A(s):
     return s[0] == "A"
@@ -182,3 +182,17 @@ def say_hello(name):
 filtered_people = filter(short_name, people)
 greetings = map(say_hello, filtered_people)
 print(list(greetings))
+
+x = 10
+x = x+5
+print(x)
+
+numbers = [1, 2, 3, 4, 5]
+for num in numbers:
+    print(num)'''
+
+def multiply(*args):
+    result = 1
+    for num in args:
+        result *= num
+    return result
