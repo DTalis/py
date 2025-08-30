@@ -30,7 +30,7 @@ class Chartreux(Cat):
         return f'{sounds}'
 
 class Siamese(Cat):
-    pass  # No unique methods for Siamese for now
+    pass
 
 # Step 2: Create a list of cat instances
 bengal_obj = Bengal(name="Elvin", age=10)
