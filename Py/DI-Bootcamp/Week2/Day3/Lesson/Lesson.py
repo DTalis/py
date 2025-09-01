@@ -2,7 +2,7 @@
 #Single
 #Multilevel
 #Multiple child
-'''
+
 from datetime import datetime, date
 class Person:
     def __init__(self, first_name, last_name, birth_date):
@@ -32,7 +32,7 @@ print(p1.last_name)
 print(p1.birth_date)
 
 print(datetime.now())
-'''
+
 
 class MyClass(object):
     count = 0
@@ -58,3 +58,6 @@ print(MyClass.get_count())
 object_2 = MyClass(20)
 print("\nValue of object : %s" % object_2.get_val())
 print(MyClass.get_count())
+
+
+
