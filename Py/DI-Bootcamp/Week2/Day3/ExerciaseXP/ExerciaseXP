@@ -1,0 +1,176 @@
+
+print("\n🌟 Exercise 1: Currencies")
+class Currency:
+    def __init__(self, currency, amount):
+        self.currency = currency
+        self.amount = amount
+
+    def __str__(self):
+        return f'{self.amount} {self.currency}{"s" if self.amount != 1 else ""}'
+
+    def __repr__(self):
+        return f'{self.amount} {self.currency}{"s" if self.amount != 1 else ""}'
+
+    def __int__(self):
+        return self.amount
+
+    def __add__(self, other):
+        if isinstance(other, (int, float)):
+            return self.amount + other
+        elif isinstance(other, Currency):
+            if self.currency != other.currency:
+                raise TypeError(f'Cannot add between Currency type <{self.currency}> and <{other.currency}>')
+            return self.amount + other.amount
+        else:
+            raise TypeError(f'Unsupported operand type(s) for +: \'Currency\' and \'{type(other).__name__}\'')
+
+    def __iadd__(self, other):
+        if isinstance(other, (int, float)):
+            self.amount += other
+            return self
+        elif isinstance(other, Currency):
+            if self.currency != other.currency:
+                raise TypeError(f'Cannot add between Currency type <{self.currency}> and <{other.currency}>')
+            self.amount += other.amount
+            return self
+        else:
+            raise TypeError(f'Unsupported operand type(s) for +=: \'Currency\' and \'{type(other).__name__}\'')
+
+# --- Test cases to demonstrate functionality ---
+c1 = Currency('dollar', 5)
+c2 = Currency('dollar', 10)
+c3 = Currency('shekel', 1)
+c4 = Currency('shekel', 10)
+
+print(c1)
+# Expected output: '5 dollars'
+
+print(int(c1))
+# Expected output: 5
+
+print(repr(c1))
+# Expected output: '5 dollars'
+
+print(c1 + 5)
+# Expected output: 10
+
+print(c1 + c2)
+# Expected output: 15
+
+print(c1)
+# Expected output: 5 dollars
+
+c1 += 5
+print(c1)
+# Expected output: 10 dollars
+
+c1 += c2
+print(c1)
+# Expected output: 20 dollars
+
+try:
+    print(c1 + c3)
+except TypeError as e:
+    print(e)
+# Expected output: TypeError: Cannot add between Currency type <dollar> and <shekel>
+
+print("\n🌟 Exercise 2: Import")
+
+from func import add_numbers
+
+add_numbers(5, 7)
+
+
+print("\n🌟 Exercise 3: String Module")
+import string
+import random
+
+letters = string.ascii_letters
+
+random_string = ''
+for _ in range(5):
+    random_string += random.choice(letters)
+
+print("Random String:", random_string)
+
+
+print("\n🌟 Exercise 4: Current Date")
+import datetime
+
+def display_current_date():
+    today = datetime.date.today()
+    print("Today's date is:", today)
+
+# Call the function
+display_current_date()
+
+print("\n🌟 Exercise 5: Amount Of Time Left Until January 1st")
+def time_until_january_first():
+    now = datetime.datetime.now()
+    next_year = now.year + 1
+    jan_first = datetime.datetime(year=next_year, month=1, day=1)
+    time_left = jan_first - now
+
+    days = time_left.days
+    seconds = time_left.seconds
+    hours = seconds // 3600
+    minutes = (seconds % 3600) // 60
+    secs = seconds % 60
+
+    print(f"Time left until January 1st: {days} days, {hours} hours, {minutes} minutes, {secs} seconds")
+
+# Call the function
+time_until_january_first()
+
+
+
+print("\n🌟 Exercise 6: Birthday And Minutes")
+import datetime
+
+def minutes_lived(birthdate_str):
+    # Define the format of the input string (e.g., 'YYYY-MM-DD')
+    birthdate = datetime.datetime.strptime(birthdate_str, "%Y-%m-%d")
+    
+    # Get current date and time
+    now = datetime.datetime.now()
+    
+    # Calculate the time difference
+    time_lived = now - birthdate
+    
+    # Get total minutes
+    minutes = time_lived.total_seconds() / 60
+    
+    # Print result
+    print(f"You have lived approximately {int(minutes):,} minutes.")
+
+# Example usage
+minutes_lived("1992-05-13")
+
+
+
+print("\n🌟 Exercise 7: Faker Module")
+# Step 2: Import faker
+from faker import Faker
+
+# Step 3: Create an empty list to store users
+users = []
+
+# Initialize Faker instance
+fake = Faker()
+
+# Step 4: Create function to add users
+def add_users(num_users):
+    for _ in range(num_users):
+        user = {
+            "name": fake.name(),
+            "address": fake.address(),
+            "language_code": fake.language_code()
+        }
+        users.append(user)
+
+# Step 5: Call the function and print users
+add_users(5)  # generate 5 fake users
+
+for user in users:
+    print(user)
+
