@@ -173,3 +173,17 @@ add_users(5)  # generate 5 fake users
 for user in users:
     print(user)
 
+print("\n🌟 Exercise Gold")
+
+from googletrans import Translator
+
+french_words = ["Bonjour", "Au revoir", "Bienvenue", "A bientôt"]
+translator = Translator()
+
+translations = {}
+
+for word in french_words:
+    translation = translator.translate(word, src='fr', dest='en')
+    translations[word] = translation.text
+
+print(translations)
