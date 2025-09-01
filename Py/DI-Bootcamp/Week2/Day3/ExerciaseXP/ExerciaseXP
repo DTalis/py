@@ -1,4 +1,3 @@
-
 print("\n🌟 Exercise 1: Currencies")
 class Currency:
     def __init__(self, currency, amount):
