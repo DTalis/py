@@ -31,3 +31,18 @@ print('----------------------------------------------------------------\n')
 print(df[df['Price']>10])
 print('----------------------------------------------------------------\n')
 print(df.groupby('Author')['Copies Sold'].sum())
+
+
+data1 = {
+    'Name': ['John', 'Anna', 'Peter', 'Linda'],
+    'Age': [28, 34, 29, 32],
+    'City': ['New York', 'Paris', 'London', 'London']
+}
+df1 = pd.DataFrame(data1)
+
+
+
+print(df1.sort_values(by='Age'))
+print('\n')
+print(df1[df1['Age'] > 30])
+print('\n')
