@@ -1,0 +1,12 @@
+URL: https://github.com/DTalis/py/blob/main/Py/DI-Bootcamp/Week2/Day4/DailyChalenge.py
+suggestions for improvement:
+- Consider handling edge cases in `most_common_word` more gracefully (e.g., returning an empty list or a more informative message if the text is empty).
+- The stop words list in `remove_stop_words` could be expanded for better results.
+- The file handling in the `from_file` method could benefit from more robust error handling (e.g., handling permission errors).
+- In the `remove_stop_words` function, converting the text to lowercase and splitting it is done twice, once in the parent class and once in the child class. You could potentially call a method from the parent class.
+Brief justification:
+- correctness: The code accurately implements all the required methods in the `Text` and `TextModification` classes, including `word_frequency`, `most_common_word`, `unique_words`, `from_file`, `remove_punctuation`, `remove_stop_words`, and `remove_special_characters`, directly addressing the chapter content and instructions.
+- readability: The code is well-structured and uses meaningful variable names, making it relatively easy to understand. However, some comments could further improve readability.
+- performance: The code's performance is generally good, but there's room for minor improvements, such as optimizing the word frequency counting and stop word removal. Converting to lowercase multiple times could be avoided.
+- security: The code uses file handling and regular expressions safely. Using `encoding='utf-8'` when opening files is a good practice. However, more robust error handling could prevent some potential issues.
+
