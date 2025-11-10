@@ -1,0 +1,10 @@
+URL: https://github.com/DTalis/py/blob/main/Py/DI-Bootcamp/Week6/Day5/Ex/Ex1_2.sql
+suggestions for improvement:
+- Consider adding comments to explain complex logic within the queries, especially in CTEs.
+- Formatting could be improved for consistency, particularly with indentation.
+Brief justification:
+- correctness: All tasks are correctly implemented using appropriate SQL window functions and CTEs, aligning perfectly with the exercise requirements. Each task's goal is achieved with the provided code.
+- readability: The code is generally well-formatted and easy to understand. The use of aliases improves readability. However, more comments could be added for clarification.
+- performance: The queries are efficient, utilizing window functions appropriately which are generally optimized in SQL databases. CTEs are used judiciously to break down complex queries.
+- security: The code does not involve any direct user input, so SQL injection is not a concern. All operations are performed on existing database tables.
+
