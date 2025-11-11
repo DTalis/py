@@ -1,0 +1,10 @@
+URL: https://github.com/DTalis/py/blob/main/Py/DI-Bootcamp/Week6/Day4/Ex/Ex1_2.sql
+suggestions for improvement:
+- Consider adding comments to explain complex logic within subqueries.
+- Optimize queries by using indexes on frequently accessed columns to improve performance.
+Brief justification:
+- correctness: All tasks are correctly implemented. The SQL queries accurately address the requirements of each problem, using subqueries, temporary tables, and data manipulation techniques as described in the chapter content. The logic in each query aligns perfectly with the task's objective.
+- readability: The code is well-structured and easy to follow. Consistent indentation and naming conventions are used.  Adding comments to explain particularly complex subqueries would further enhance readability.
+- performance: The performance is generally good. The use of temporary tables helps in optimizing some queries. Using indexes on columns used in JOIN and WHERE clauses could further improve performance, especially for larger datasets.
+- security: The code appears secure. The queries do not contain any obvious vulnerabilities, such as SQL injection risks.  Parameterized queries are implicitly used, which is a good practice.
+

@@ -1,0 +1,18 @@
+URL: URL: https://github.com/DTalis/py/blob/main/Py/DI-Bootcamp/Week2/Day5/anagram_checker.py
+suggestions for improvement:
+- Consider adding type hints to the `__init__` method's parameters and return value for enhanced readability.
+- The use of a static method for `is_anagram` is good; it could be documented more explicitly why it's static (no need for `self`).
+- The code could benefit from a docstring explaining the purpose and usage of the class.
+Correctness: 100%
+-----
+URL: URL: https://github.com/DTalis/py/blob/main/Py/DI-Bootcamp/Week2/Day5/anagrams.py
+suggestions for improvement:
+- Consider adding more comments to explain complex logic within the `main` function for enhanced readability.
+Correctness: 100%
+-----
+URL: URL: https://github.com/DTalis/py/blob/main/Py/DI-Bootcamp/Week2/Day5/sowpods.txt
+suggestions for improvement:
+- This submission only provides a text file with a list of words; no code is present.  Therefore, it cannot fulfill any of the instructions related to creating the `AnagramChecker` class or the user interface in `anagrams.py`.
+- This file appears to be a word list, not code. It directly provides the data specified but does not implement any functionality related to OOP, file I/O, string manipulation, or algorithm design, as described in the instructions. Therefore, it does not address the core requirements of the exercise.
+Correctness: 0.0%
+-----

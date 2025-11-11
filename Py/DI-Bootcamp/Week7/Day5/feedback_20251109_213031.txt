@@ -1,0 +1,10 @@
+URL: URL: https://github.com/DTalis/py/blob/main/Py/DI-Bootcamp/Week7/Day5/W7D5_Daily.ipynb
+suggestions for improvement:
+- This code is completely unrelated to the provided chapter content, which focuses on SQL queries for analyzing an IPL database. The code scrapes GitHub topics instead.
+Correctness: 0%
+-----
+URL: URL: https://github.com/DTalis/py/blob/main/Py/DI-Bootcamp/Week7/Day5/W7D5_Ex.ipynb
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
