@@ -1,5 +1,14 @@
 import time
 import csv
+import logging
+
+# Configure console-only logging early so steps can log as the script runs
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(message)s",
+    handlers=[logging.StreamHandler()],
+)
+logger = logging.getLogger(__name__)
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -15,6 +24,7 @@ from bs4 import BeautifulSoup
 # 1. Initialize Selenium WebDriver
 # -----------------------------
 chromedriver_autoinstaller.install()  # installs matching ChromeDriver if needed
+logger.info("Chromedriver install checked/installed")
 
 chrome_options = Options()
 # comment this line if you want to see the browser window
@@ -23,6 +33,7 @@ chrome_options.add_argument("--no-sandbox")
 chrome_options.add_argument("--disable-dev-shm-usage")
 
 driver = webdriver.Chrome(options=chrome_options)
+logger.info("Chrome WebDriver started (headless=%s)", "--headless=new" in chrome_options.arguments)
 
 try:
     # -----------------------------
@@ -30,6 +41,7 @@ try:
     # -----------------------------
     url = "https://www.inmotionhosting.com/"
     driver.get(url)
+    logger.info("Requested URL: %s", url)
 
     # Wait until some dynamic content is loaded (e.g. the "Compare Our Hosting Plans" block)
     WebDriverWait(driver, 20).until(
@@ -38,12 +50,14 @@ try:
 
     # Give a tiny extra delay just in case JS continues rendering
     time.sleep(2)
+    logger.info("Waited 2s for additional rendering")
 
     # -----------------------------
     # 3. Parse the page with BeautifulSoup
     # -----------------------------
     html = driver.page_source
     soup = BeautifulSoup(html, "html.parser")
+    logger.info("Page parsed with BeautifulSoup (html length=%d)", len(html))
 
     # We will scrape plan categories from the "Compare Our Hosting Plans" section:
     # Shared Hosting, Hosting for WordPress, VPS Hosting, Dedicated Hosting
@@ -101,6 +115,7 @@ try:
             "starting_price": starting_price,
             "renews_at": renews_at,
         })
+        logger.debug("Appended plan: %s (features=%d)", plan_category, len(features))
 
     # -----------------------------
     # 5. Store and Save the Data to CSV
@@ -113,10 +128,10 @@ try:
         writer.writeheader()
         writer.writerows(plans_data)
 
-    print(f"Scraped {len(plans_data)} plan categories.")
+    logger.info("Scraped %d plan categories.", len(plans_data))
     for row in plans_data:
-        print(row)
-    print(f"Data saved to {csv_filename}")
+        logger.debug("Row: %s", row)
+    logger.info("Data saved to %s", csv_filename)
 
 finally:
     # -----------------------------
