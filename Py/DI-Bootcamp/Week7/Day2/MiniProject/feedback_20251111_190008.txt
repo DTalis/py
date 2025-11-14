@@ -1,0 +1,5 @@
+URL: URL: https://github.com/DTalis/py/blob/main/Py/DI-Bootcamp/Week7/Day2/MiniProject/Mini_project1_W7D2_ipynb_.ipynb
+suggestions for improvement:
+- The provided code does not address the mini-project's requirements. It uses a completely different dataset (Brazilian E-Commerce Olist Dataset) and attempts to perform analysis on it, which is not related to the IPL database and SQL queries asked for in the prompt. The code loads various CSV files related to e-commerce, creates a SQLite database, and executes some SQL queries on that database. However, this is unrelated to the IPL and its associated tasks.
+Correctness: 0%
+-----
