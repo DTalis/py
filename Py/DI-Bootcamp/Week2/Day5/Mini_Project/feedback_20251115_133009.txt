@@ -1,0 +1,10 @@
+URL: URL: https://github.com/DTalis/py/blob/main/Py/DI-Bootcamp/Week2/Day5/Mini_Project/w2d5mini1.py
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
+URL: URL: https://github.com/DTalis/py/blob/main/Py/DI-Bootcamp/Week2/Day5/Mini_Project/w2d5mini2.py
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
