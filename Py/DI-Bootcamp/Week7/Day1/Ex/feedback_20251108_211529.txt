@@ -1,0 +1,13 @@
+URL: https://github.com/DTalis/py/blob/main/Py/DI-Bootcamp/Week7/Day1/Ex/Ex1_5.sql
+suggestions for improvement:
+- In Exercise 1, the conversion of the 'date' column uses TO_CHAR(to_timestamp(s."date", 'DD/MM/YYYY HH24:MI'), 'YYYYMMDD'). The exercise asked to cast date to DATE. Consider using DATE(s.date) which would be more compliant with the request.
+- In Exercise 1, use COALESCE to fill in missing employee names using employee_name_emp. If 'employee_name_emp' also contains missing values, additional steps may be needed to handle these cases.
+- The script uses NULLIF(TRIM(column), '') to clean the data. Review the dataset to make sure it includes empty strings '' rather than ' ' that needs to be replaced.
+- Consider using more descriptive names for common table expressions (CTEs) in Exercises 4 and 5 to enhance readability.
+- Add comments to describe the purpose of each query, mainly in exercises 3 to 5.
+Brief justification:
+- correctness: The code correctly addresses the majority of the exercises. It builds a comprehensive dataset, cleans it by removing spaces and NULL values, and performs the required analysis to calculate employee counts, analyze employee distribution, and evaluate employment trends and salary metrics. However, the handling of the 'date' column conversion and potential missing employee names could be improved. There are also some issues with NULLIF usage and potential confusion with '' and ' '.
+- readability: The code is generally readable, but the use of more descriptive names for CTEs and the addition of comments to explain the purpose of each query would enhance readability, especially in exercises 3-5.
+- performance: The code uses appropriate SQL functions for data manipulation and aggregation, which should provide acceptable performance for the given dataset size. The use of indexes is not explicitly mentioned, but should be considered for large datasets.
+- security: The code does not appear to have any major security vulnerabilities. It does not use any dynamic SQL or user-provided input that could lead to SQL injection attacks.
+
