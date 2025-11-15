@@ -1,0 +1,7 @@
+URL: URL: https://github.com/DTalis/py/blob/main/Py/DI-Bootcamp/Week7/Day2/MiniProject/Mini_project1_W7D2_ipynb_.ipynb
+suggestions for improvement:
+- Consider adding comments to SQL queries to further improve readability, especially for complex queries.
+- Use more descriptive variable names (e.g., instead of 'yoy' use 'year_on_year_trend').
+- It would be beneficial to encapsulate each query into a separate function for better code organization and reusability.
+Correctness: 100%
+-----

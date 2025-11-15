@@ -1,0 +1,28 @@
+URL: URL: https://github.com/DTalis/py/blob/main/Py/DI-Bootcamp/Week8/Ex/E2_dynamic.html
+suggestions for improvement:
+- Exercise 2 asked for creating two HTML files - one static and one using JavaScript. This code only provides the JavaScript-enhanced HTML page.
+- Exercise 3,4, and 5 required web scraping using Selenium and BeautifulSoup, but there is no code related to web scraping here.
+Correctness: 20%
+-----
+URL: URL: https://github.com/DTalis/py/blob/main/Py/DI-Bootcamp/Week8/Ex/Ex1.html
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
+URL: URL: https://github.com/DTalis/py/blob/main/Py/DI-Bootcamp/Week8/Ex/Ex2_static.html
+suggestions for improvement:
+- This code only provides a static HTML page and does not address any of the exercises related to JavaScript, Selenium, or BeautifulSoup, rendering it irrelevant to the chapter's content.
+Correctness: 0%
+-----
+URL: URL: https://github.com/DTalis/py/blob/main/Py/DI-Bootcamp/Week8/Ex/Ex3.py
+suggestions for improvement:
+- Consider adding more specific error handling for edge cases during data extraction.
+- The code is well structured but could benefit from more comments inline to explain complex regex or data parsing steps.
+Correctness: 100%
+-----
+URL: URL: https://github.com/DTalis/py/blob/main/Py/DI-Bootcamp/Week8/Ex/W8D1_Ex5_AccuWeather.ipynb
+suggestions for improvement:
+- The code uses regular expressions for parsing, which might be fragile if the website's HTML structure changes frequently. Consider more robust parsing methods if possible.
+- The code includes a `time.sleep` call. While necessary for waiting for dynamic content, excessive use can slow down the scraping process. Consider using more targeted waiting strategies with `WebDriverWait` and `expected_conditions` if possible.
+Correctness: 100%
+-----
