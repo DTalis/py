@@ -1,0 +1,10 @@
+URL: https://github.com/DTalis/py/blob/main/Py/DI-Bootcamp/Week1/Day4/DailyChalenge/w1d4daily.py
+suggestions for improvement:
+- Consider adding validation for negative prices in `add_item` and `update_price` as per the extra challenges.
+- While not required, you could add docstrings to the `show_options` and `run_coffee_shop` functions for better documentation.
+Brief justification:
+- correctness: The code accurately implements all the required functions (show_menu, add_item, update_price, delete_item, show_options, run_coffee_shop) and follows the program flow as described in the chapter content. It uses the specified data structure (dictionary) and handles all the specified interactions and error conditions.
+- readability: The code is well-structured and easy to understand, with clear function definitions and comments. Variable names are descriptive, and the code is consistently formatted.
+- performance: The code uses efficient data structures (dictionaries) and algorithms for the given task. The main loop is simple and does not perform any unnecessary computations.
+- security: The code uses `strip()` to sanitize user input, which helps prevent some basic injection attacks. It also uses `try-except` blocks to handle potential `ValueError` exceptions when converting user input to a float. Further validation could be implemented to enhance security.
+
