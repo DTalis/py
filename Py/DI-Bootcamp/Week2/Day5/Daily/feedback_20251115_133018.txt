@@ -1,0 +1,11 @@
+URL: URL: https://github.com/DTalis/py/blob/main/Py/DI-Bootcamp/Week2/Day5/Daily/w2d5daily1.py
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
+URL: URL: https://github.com/DTalis/py/blob/main/Py/DI-Bootcamp/Week2/Day5/Daily/w2d5daily2.py
+suggestions for improvement:
+- Consider adding error handling for edge cases, such as attempting to deal from an empty deck, directly in the shuffle method or in a separate method called 'reset'.
+- The shuffle method could be renamed to `reset_deck` or `create_deck` since it initializes the deck as well as shuffles it.
+Correctness: 100%
+-----
